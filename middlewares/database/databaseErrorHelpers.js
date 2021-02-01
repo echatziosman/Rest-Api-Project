@@ -12,7 +12,7 @@ const checkUserExist = asyncErrorWrapper(async (req,res,next) =>{
         return next(new CustomError("Boyle Bir Kullanici Bulunamadi..",400));
     }
     // req.data = user (boyle de yapabiliriz controller sinifindan veritabani sorgusu yapmadan req icinden veriye ulasabiliriz)
-    next();
+     next();
     
 });
 const checkQuestionExist = asyncErrorWrapper(async (req,res,next) =>{

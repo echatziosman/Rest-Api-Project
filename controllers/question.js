@@ -10,21 +10,9 @@ const askNewQuestion =asyncErrorWrapper(async (req,res,next)   =>{
         ...information, // Diger turlu: title: information.title olur
         user : req.user.id // Kullanici giris yaptigi icin user, req'in icinde
     });
-
-    res.status(200).json({
-        success: true,
-        data : question
-    });
 });
-const getAllQuestions =asyncErrorWrapper(async (req,res,next)   =>{
-    
-    const questions = await Question.find();
 
-    res.status(200).json({
-        success: true,
-        data : questions
-    });
-});
+   
 /*
 const getSingleQuestion = asyncErrorWrapper(async (req,res,next)   =>{
     
